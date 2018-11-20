@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.jessyan.art.widget.autolayout.AutoCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/btn"
+    android:layout_width="match_parent"
+    android:layout_marginTop="30px"
+    android:layout_height="300px">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/goods_name"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@+id/goods_img"
+            android:text="打折大促销"
+            android:textSize="40px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/goods_img"
+            android:layout_width="300px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:layout_marginTop="10px"
+            android:layout_toRightOf="@+id/cartin_select"
+            android:scaleType="centerCrop"
+            android:src="@drawable/leak_canary_icon" />
+        <TextView
+            android:gravity="center"
+            android:text=""
+            android:layout_marginTop="10px"
+            android:textStyle="bold"
+            android:layout_below="@id/goods_name"
+            android:textColor="@color/red"
+            android:id="@+id/goods_price"
+            android:layout_toRightOf="@id/goods_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:gravity="center"
+            android:text=""
+            android:layout_marginTop="10px"
+            android:textStyle="bold"
+            android:layout_below="@id/goods_price"
+            android:textColor="@color/red"
+            android:id="@+id/number"
+            android:layout_toRightOf="@id/goods_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</me.jessyan.art.widget.autolayout.AutoCardView>
+
+

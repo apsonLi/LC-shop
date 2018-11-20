@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <!--<me.jessyan.art.widget.autolayout.AutoAppBarLayout-->
+
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<me.jessyan.art.widget.autolayout.AutoCollapsingToolbarLayout-->
+            <!--app:layout_scrollFlags="scroll|exitUntilCollapsed"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+            <!--<ImageView-->
+                <!--android:src="@drawable/leak_canary_icon"-->
+                <!--app:layout_collapseMode="parallax"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="200dp" />-->
+        <!--</me.jessyan.art.widget.autolayout.AutoCollapsingToolbarLayout>-->
+
+    <!--</me.jessyan.art.widget.autolayout.AutoAppBarLayout>-->
+
+    <ImageView
+        android:visibility="gone"
+        android:fitsSystemWindows="true"
+        android:src="@drawable/bootpage"
+        android:id="@+id/bootpage"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <android.support.v4.view.ViewPager
+        android:visibility="gone"
+        android:id="@+id/vp_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

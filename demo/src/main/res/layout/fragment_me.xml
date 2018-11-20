@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refresh_me"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:layout_height="match_parent"
+    tools:context=".mvp.ui.fragment.MeFragment">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:fitsSystemWindows="true"
+        android:clipToPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <me.jessyan.art.widget.autolayout.AutoAppBarLayout
+            android:fitsSystemWindows="true"
+            android:clipToPadding="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_bar_height">
+
+            <RelativeLayout
+                android:background="@drawable/me_top_shape"
+                app:layout_scrollFlags="scroll|snap|enterAlways"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/logout"
+                    android:text="退出登录"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+
+                    android:id="@+id/head"
+                    android:layout_centerInParent="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:text="apson"
+                    android:id="@+id/nickname"
+                    android:layout_below="@id/head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </me.jessyan.art.widget.autolayout.AutoAppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+
+        android:id="@+id/body"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/fouritem"
+                android:paddingTop="20px"
+                android:paddingBottom="20px"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <TextView
+                    android:gravity="center"
+                    android:drawableTop="@drawable/icon_order"
+                    android:layout_weight="1"
+                    android:text="待付款"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:gravity="center"
+                    android:drawableTop="@drawable/icon_order"
+                    android:layout_weight="1"
+                    android:text="已发货"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:gravity="center"
+                    android:drawableTop="@drawable/icon_order"
+                    android:layout_weight="1"
+                    android:text="已签收"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:gravity="center"
+                    android:drawableTop="@drawable/icon_order"
+                    android:layout_weight="1"
+                    android:text="全部订单"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_below="@id/fouritem"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/orange"
+                android:orientation="horizontal"
+                android:id="@+id/addr_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+               <TextView
+                   android:id="@+id/manage_address"
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   android:text="管理收货地址"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+         </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.jessyan.art.widget.autolayout.AutoCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/btn"
+    android:layout_width="match_parent"
+    android:layout_height="300px">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/cartin_select"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/cartin_not_select"
+            android:layout_width="100px"
+            android:layout_height="match_parent" />
+        <TextView
+            android:gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/goods_name"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@+id/goods_img"
+            android:text="打折大促销"
+            android:textSize="40px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/goods_img"
+            android:layout_width="300px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:layout_marginTop="10px"
+            android:layout_toRightOf="@+id/cartin_select"
+            android:scaleType="centerCrop"
+            android:src="@drawable/leak_canary_icon" />
+        <TextView
+            android:gravity="center"
+            android:text="100"
+            android:layout_marginTop="10px"
+            android:textStyle="bold"
+            android:layout_below="@id/goods_name"
+            android:textColor="@color/red"
+            android:id="@+id/goods_price"
+            android:layout_toRightOf="@id/goods_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+
+            android:orientation="horizontal"
+            android:layout_toRightOf="@id/goods_img"
+            android:id="@+id/add_del"
+            android:layout_below="@+id/goods_price"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:layout_weight="2"
+                android:id="@+id/goods_add"
+                android:src="@mipmap/add"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/goods_number"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:layout_weight="2"
+                android:id="@+id/goods_reduce"
+                android:src="@mipmap/reduce"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</me.jessyan.art.widget.autolayout.AutoCardView>
+
+

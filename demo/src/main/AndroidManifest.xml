@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.codetech.apson.shop">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:name="me.jessyan.art.base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/art_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".mvp.ui.activity.StartPageActivity"
+            android:theme="@style/ThemSplash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+        autolayout meta
+        配置设计图的宽高, 配合 AutoLayout 控件使用, 在设计图尺寸以外的其它尺寸手机上, 也能达到和设计图一样的效果
+        注意: 本框架并不强制您使用 AutoLayout, 如果您不想使用 AutoLayout, 就不要配置下面的 meta-data
+        -->
+        <meta-data
+            android:name="design_width"
+            android:value="1080" />
+        <meta-data
+            android:name="design_height"
+            android:value="1920" />
+
+        <!-- art配置 -->
+        <meta-data
+            android:name="com.codetech.apson.shop.app.GlobalConfiguration"
+            android:value="ConfigModule" />
+
+        <activity android:name=".mvp.ui.activity.MainActivity" />
+        <activity android:name=".mvp.ui.activity.loginActivity" />
+        <activity
+            android:name=".mvp.ui.activity.GoodsInfoActivity"
+            android:theme="@style/ThemTest" />
+        <activity android:name=".mvp.ui.activity.RegisterActivity" />
+        <activity android:name=".mvp.ui.activity.SearchActivity" />
+        <activity android:name=".mvp.ui.activity.AddressActivity" />
+        <activity android:name=".mvp.ui.activity.AddressChangeActivity" />
+        <activity android:name=".mvp.ui.activity.PayActivity"></activity>
+    </application>
+
+</manifest>

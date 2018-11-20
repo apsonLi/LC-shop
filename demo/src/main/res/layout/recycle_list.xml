@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.jessyan.art.widget.autolayout.AutoCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="850px"
+    android:layout_marginBottom="15px"
+    android:layout_marginLeft="3px"
+    android:layout_marginRight="3px">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent">
+
+        <ImageView
+
+            android:id="@+id/iv_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="700px"
+            android:scaleType="centerCrop"
+            tools:src="#000000" />
+
+        <TextView
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:paddingTop="10px"
+            android:layout_marginLeft="10px"
+            android:layout_gravity="left"
+            android:id="@+id/goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="40px"
+            tools:text="" />
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="1"
+            android:layout_marginLeft="10px"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$200" />
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/sold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/gray_8f"
+
+                android:text="20" />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</me.jessyan.art.widget.autolayout.AutoCardView>
